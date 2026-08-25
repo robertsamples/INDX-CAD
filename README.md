@@ -32,7 +32,9 @@ If you want to see an interactive version of the model without having to install
 
 ## Viewer
 
-A live 3D viewer and download links are published as a static site from `index.html`.
+A live 3D viewer and download links are published at
+[indx-cad.baconmilkshake.com](https://indx-cad.baconmilkshake.com/). The static site lives in
+`site/`, which Vercel serves as the web root.
 
 ## License
 

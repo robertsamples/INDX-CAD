@@ -1,5 +1,5 @@
-# Keep the multi-hundred-megabyte CAD sources out of the Vercel deployment.
-# They live on GitHub; the site only links to them.
+# Vercel serves the "site" folder as the web root (Project Settings -> Root Directory).
+# These CAD sources live on GitHub only; keeping them out saves ~185 MB per deploy.
 *.f3z
 *.step
 *.stp

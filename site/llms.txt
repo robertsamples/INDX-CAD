@@ -1,0 +1,40 @@
+# INDX-CAD
+
+> Reverse engineered parametric CAD of the Prusa INDX toolhead, including the internal
+> mechanism. Prusa published the toolhead as a printable mesh under CC BY-SA 4.0; that mesh
+> was clean enough for parametric geometry to be extracted and converted to solid CAD. The
+> original model and its remixes were later removed from Printables, so the source mesh is
+> archived here alongside the reconstruction. Free, CC BY-SA 4.0, no account.
+
+## What this is
+
+- Solid, parametric geometry — not a mesh reconstruction. Fillets, internal geometry, and the
+  moving assemblies are all modeled, and the mechanism is complete.
+- Reverse engineered from Prusa's printable model, which was licensed CC BY-SA 4.0. This work
+  carries the same license.
+- Hosted deliberately outside the usual 3D printing model sites, in a lower visibility space.
+
+## Files
+
+Downloads are served from the GitHub repository, not from this domain.
+
+| File | Format | Use |
+| --- | --- | --- |
+| `INDX.f3z` | Fusion 360 archive | Full parametric assembly, editable history |
+| `INDX.step` | STEP | Neutral solid geometry for any other CAD package |
+| `indx_toolhead_8t.3mf` | 3MF | Prusa's original printable mesh, archived |
+
+- Repository: https://github.com/robertsamples/INDX-CAD
+- Archive of everything: https://github.com/robertsamples/INDX-CAD/archive/refs/heads/main.zip
+
+## Viewer
+
+The page at https://indx-cad.baconmilkshake.com/ embeds an Autodesk Fusion public share as a
+live 3D viewer — orbit, zoom, and isolate components in the browser without installing CAD.
+The viewer is an Autodesk-hosted iframe, so its contents are not part of this site's markup.
+
+## License
+
+CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
+Attribution to Prusa Research for the original printable model, and to Robert Samples for the
+CAD reconstruction. Derivative works must be shared alike.
