@@ -1,0 +1,7 @@
+# Keep the multi-hundred-megabyte CAD sources out of the Vercel deployment.
+# They live on GitHub; the site only links to them.
+*.f3z
+*.step
+*.stp
+*.3mf
+*.zip

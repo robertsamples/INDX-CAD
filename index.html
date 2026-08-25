@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>INDX-CAD — Reverse Engineered CAD</title>
+<meta name="description" content="Reverse engineered CAD of Prusa's INDX toolhead with internal geometry. Live 3D viewer and STEP/F3Z downloads.">
+<meta property="og:title" content="INDX-CAD">
+<meta property="og:description" content="Reverse engineered CAD with internal geometry — live 3D viewer and downloads.">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --bg: #0e0f11;
+    --panel: #17191d;
+    --border: #2a2e35;
+    --text: #e8eaed;
+    --muted: #9aa3ad;
+    --accent: #f0932b;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f6f7f9;
+      --panel: #ffffff;
+      --border: #dfe3e8;
+      --text: #16181c;
+      --muted: #5c6672;
+      --accent: #c96a00;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 40px 20px 64px;
+  }
+  header { margin-bottom: 28px; }
+  h1 {
+    margin: 0 0 6px;
+    font-size: clamp(28px, 5vw, 40px);
+    letter-spacing: -0.02em;
+  }
+  .tagline {
+    margin: 0;
+    color: var(--muted);
+    font-size: 17px;
+  }
+  .viewer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1024 / 768;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .viewer iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+  .hint {
+    margin: 10px 2px 0;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 28px 0 0;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: border-color .15s ease, transform .15s ease;
+  }
+  .btn:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .btn svg { width: 20px; height: 20px; fill: currentColor; }
+  .about {
+    margin-top: 40px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 15px;
+  }
+  .about p { margin: 0 0 14px; }
+  .about a { color: var(--accent); }
+  footer {
+    margin-top: 32px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>INDX-CAD</h1>
+    <p class="tagline">Reverse engineered CAD from Prusa's printable model, with internal geometry.</p>
+  </header>
+
+  <main>
+    <div class="viewer">
+      <iframe
+        src="https://smith150.autodesk360.com/shares/public/SH90d2dQT28d5b6028113d2a1ca940f232de?mode=embed"
+        title="INDX CAD — Autodesk Fusion 360 live viewer"
+        allowfullscreen="true"
+        webkitallowfullscreen="true"
+        mozallowfullscreen="true"
+        frameborder="0"
+        loading="lazy"></iframe>
+    </div>
+    <p class="hint">Drag to orbit · scroll to zoom · use the browser tree in the viewer to isolate components.</p>
+
+    <div class="actions">
+      <a class="btn" href="https://github.com/robertsamples/INDX-CAD" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        Download full CAD on GitHub
+      </a>
+      <a class="btn" href="https://github.com/robertsamples/INDX-CAD/archive/refs/heads/main.zip">
+        Download .zip
+      </a>
+    </div>
+  </main>
+
+  <section class="about">
+    <p>
+      Geometry reverse engineered from Prusa's printable model, which was licensed under
+      CC BY-SA 4.0 (the original 3MF is included in the repository for archival purposes).
+      The original model and its remixes were removed from Printables. Prusa's mesh was clean
+      enough for parametric geometry to be extracted and converted to STEP.
+    </p>
+    <p>
+      The mechanism is complete — fillets, internal geometry, and the moving assemblies are
+      all modeled. The repository contains the Fusion 360 archive (<code>.f3z</code>), a STEP
+      export, and the original <code>.3mf</code>.
+    </p>
+  </section>
+
+  <footer>
+    Shared under CC BY-SA 4.0 · <a href="https://github.com/robertsamples/INDX-CAD" style="color:inherit">github.com/robertsamples/INDX-CAD</a>
+  </footer>
+
+</div>
+</body>
+</html>
