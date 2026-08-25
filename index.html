@@ -8,6 +8,9 @@
 <meta property="og:title" content="INDX-CAD">
 <meta property="og:description" content="Reverse engineered CAD with internal geometry — live 3D viewer and downloads.">
 <meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #0e0f11;
@@ -38,9 +41,12 @@
   .wrap {
     max-width: 1024px;
     margin: 0 auto;
-    padding: 40px 20px 64px;
+    padding: 0 20px;
   }
-  header { margin-bottom: 28px; }
+  header {
+    padding: 40px 0 26px;
+    text-align: center;
+  }
   h1 {
     margin: 0 0 6px;
     font-size: clamp(28px, 5vw, 40px);
@@ -48,17 +54,25 @@
   }
   .tagline {
     margin: 0;
-    color: var(--muted);
-    font-size: 17px;
+    color: var(--text);
+    font-family: "Anton", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: clamp(22px, 4.2vw, 38px);
+    line-height: 1.1;
+    letter-spacing: 0.01em;
   }
   .viewer {
     position: relative;
     width: 100%;
-    aspect-ratio: 1024 / 768;
+    height: clamp(480px, 88vh, 1200px);
     background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 10px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
     overflow: hidden;
+  }
+  @media (max-width: 700px) {
+    .viewer { height: clamp(400px, 72vh, 760px); }
   }
   .viewer iframe {
     position: absolute;
@@ -69,15 +83,17 @@
     display: block;
   }
   .hint {
-    margin: 10px 2px 0;
+    margin: 12px 2px 0;
+    text-align: center;
     color: var(--muted);
     font-size: 13px;
   }
   .actions {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 12px;
-    margin: 28px 0 0;
+    margin: 26px 0 0;
   }
   .btn {
     display: inline-flex;
@@ -105,7 +121,7 @@
   .about p { margin: 0 0 14px; }
   .about a { color: var(--accent); }
   footer {
-    margin-top: 32px;
+    margin: 32px 0 56px;
     color: var(--muted);
     font-size: 13px;
   }
@@ -116,20 +132,24 @@
 
   <header>
     <h1>INDX-CAD</h1>
-    <p class="tagline">Reverse engineered CAD from Prusa's printable model, with internal geometry.</p>
+    <p class="tagline">You wouldn't download a toolchanger.</p>
   </header>
 
-  <main>
-    <div class="viewer">
-      <iframe
-        src="https://smith150.autodesk360.com/shares/public/SH90d2dQT28d5b6028113d2a1ca940f232de?mode=embed"
-        title="INDX CAD — Autodesk Fusion 360 live viewer"
-        allowfullscreen="true"
-        webkitallowfullscreen="true"
-        mozallowfullscreen="true"
-        frameborder="0"
-        loading="lazy"></iframe>
-    </div>
+</div>
+
+<main>
+  <div class="viewer">
+    <iframe
+      src="https://smith150.autodesk360.com/shares/public/SH90d2dQT28d5b6028113d2a1ca940f232de?mode=embed"
+      title="INDX CAD — Autodesk Fusion 360 live viewer"
+      allowfullscreen="true"
+      webkitallowfullscreen="true"
+      mozallowfullscreen="true"
+      frameborder="0"
+      loading="lazy"></iframe>
+  </div>
+
+  <div class="wrap">
     <p class="hint">Drag to orbit · scroll to zoom · use the browser tree in the viewer to isolate components.</p>
 
     <div class="actions">
@@ -141,8 +161,10 @@
         Download .zip
       </a>
     </div>
-  </main>
+  </div>
+</main>
 
+<div class="wrap">
   <section class="about">
     <p>
       Geometry reverse engineered from Prusa's printable model, which was licensed under
