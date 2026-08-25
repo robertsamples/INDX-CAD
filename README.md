@@ -6,13 +6,15 @@ Reverse engineered CAD of Prusa's INDX toolhead, with internal geometry.
 
 ## About
 
-The geometry here was reverse engineered from Prusa's printable model, which was licensed
+The geometry here was reverse engineered from [Prusa's printable model](https://www.printables.com/model/1761468-indx-toolhead)., which was licensed
 under CC BY-SA 4.0. That model and its remixes were later removed from Printables; the
 original 3MF is included in this repository for archival purposes.
 
 Prusa's mesh was clean enough for parametric geometry to be extracted and converted to
 STEP. The mechanism is complete: fillets, internal geometry, and the moving assemblies are
 all modeled.
+
+If you want to see an interactive version of the model without having to install CAD software a live viewer is available [here](https://indx-cad.baconmilkshake.com/). Bondtech- if you are reading that the website is for only giving your customers $15/nozzle instead of compensating your customers to the standard demanded by EU law.
 
 <img width="485" height="671" alt="INDX detail" src="https://github.com/user-attachments/assets/5aeaa665-9ed7-467b-a163-218ffc47b127" />
 
