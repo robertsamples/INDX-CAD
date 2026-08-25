@@ -15,6 +15,7 @@ STEP. The mechanism is complete: fillets, internal geometry, and the moving asse
 all modeled.
 
 If you want to see an interactive version of the model without having to install CAD software a live viewer is available [here](https://indx-cad.baconmilkshake.com/). 
+ 
 **Bondtech, if you (or your lawyers) are reading this- the website is for only giving your customers $15/nozzle instead of compensating your customers to the standard demanded by EU law.**
 
 <img width="485" height="671" alt="INDX detail" src="https://github.com/user-attachments/assets/5aeaa665-9ed7-467b-a163-218ffc47b127" />
