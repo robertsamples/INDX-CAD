@@ -5,3 +5,6 @@
 *.stp
 *.3mf
 *.zip
+
+# OG card source (regeneration only, not served)
+tools/
